@@ -1,0 +1,31 @@
+{
+  "name": "corp8-task",
+  "version": "1.0.0",
+  "description": "Corp8 Task Application - Full Stack Todo App",
+  "scripts": {
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "build:client": "cd client && npm run build",
+    "build:server": "echo 'No build step for server'",
+    "build": "npm run build:client",
+    "vercel-build": "npm install --prefix client --include=dev && npm run build --prefix client",
+    "start:client": "cd client && npm run dev",
+    "start:server": "cd server && npm run dev",
+    "start": "cd server && npm start",
+    "dev": "concurrently \"npm run start:server\" \"npm run start:client\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
